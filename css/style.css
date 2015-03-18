@@ -1,4 +1,8 @@
 
+.navbar-brand {
+	text-transform: uppercase;
+}
+
 .search-form {
 	display: block;
 	margin: 8px 0 0 0;
