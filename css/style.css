@@ -1,1 +1,12 @@
 
+.search-form {
+	display: block;
+	margin: 8px 0 0 0;
+	position: absolute;
+	right: 10px;
+}
+.search-input {
+	width: 300px;
+	margin-right: 35px;
+	background-color: #e5e5e5;	
+}
