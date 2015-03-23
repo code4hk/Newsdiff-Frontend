@@ -14,3 +14,53 @@
 	margin-right: 35px;
 	background-color: #e5e5e5;	
 }
+
+article {
+	margin: 10px 0;
+	padding: 20px 0;
+	border-top: solid 1px #999;
+}
+article.first {
+	margin-top: 0;
+	padding-top: 10px;
+	border-top: none;
+}
+
+/**
+ * News teaser listing
+ */
+.news-teaser h2 {
+	color: #4C9ED9;
+	margin: 14px 0;
+}
+.news-teaser .news-rating {
+	width: 70px;
+	float: left;
+}
+.news-teaser .news-rating .icon {
+	display: block;
+	background-image: url(../images/rate.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 70px;
+	height: 35px;
+}
+.news-teaser .news-rating .rating {
+	display: block;
+	width: 70px;
+	padding: 0 0 8px 0;
+	text-align: center;
+	font-size: 26pt;
+}
+
+.news-teaser .news-teaser-content {
+	margin-left: 70px;
+}
+.news-teaser .news-teaser-content .source-name,
+.news-teaser .news-teaser-content .stats {
+	color: #777;
+}
+.news-teaser .news-teaser-content .stats .changes .figure {
+	color: #4C9ED9;
+	font-weight: bold;
+}
