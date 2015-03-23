@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watchdog</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default col-sm-12">
+	<div class="container-fluid">
+
+		<!-- search form -->
+		<form class="pull-right search-form" role="search">
+			<div class="input-group">
+				<input type="text" class="form-control search-input" placeholder="搜尋">
+				<span class="input-group-btn">
+					<button type="reset" class="btn btn-default">
+						<span class="glyphicon glyphicon-remove">
+							<span class="sr-only">清除</span>
+						</span>
+					</button>
+					<button type="submit" class="btn btn-default">
+						<span class="glyphicon glyphicon-search">
+							<span class="sr-only">搜尋</span>
+						</span>
+					</button>
+				</span>
+			</div>
+		</form>
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#lang-menu">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+				<span class="lang-zh">狗仔隊<span>
+				<span class="lang-en">Watchdogs</span>
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="lang-menu">
+			<ul class="nav navbar-nav">
+				<li class="dropdown hidden-xs">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+					 語言<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu language-menu" role="menu">
+						<li><a href="#">繁體中文</a></li>
+						<li><a href="#">简体中文</a></li>
+						<li><a href="#">English</a></li>
+					</ul><!--//.language-menu -->
+				</li>
+				<!-- extra features -->
+				<li class="hidden-xs"><a href="#">最新鮮</a></li>
+				<li class="hidden-xs"><a href="#">最熱門</a></li>
+				<li class="hidden-xs"><a href="#">改最多</a></li>
+				<!-- extra features end -->
+				<li>
+					<ul class="nav visible-xs-inline language-menu-xs">
+						<li><a href="#">繁體中文</a></li>
+						<li><a href="#">简体中文</a></li>
+						<li><a href="#">English</a></li>
+					</ul>
+				</li><!--//.language-menu-xs -->
+			</ul>
+		</div><!-- /.navbar-collapse -->
+
+	</div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+	<div class="row">
+
+		<article class="news-full page">
+			<div class="source">
+				<span class="source-name">香港新聞</span> •
+				<span class="source-time">Saturday, February 28, 2015</span>
+			</div>
+			<h1>This is an English Headline</h1>
+			<div class="stats">
+				<span class="time">
+					<span class="figure">55</span>
+					分鐘前更新
+				</span> •
+				<span class="changes">
+					改動
+					<span class="figure">66%</span>
+				</span> •
+				<span class="comments">
+					<span class="figure">777</span>
+					條評論
+				</span>
+			</div><!--/.stats -->
+			<div class="content">
+				<p><span class="change add">Lorem ipsum</span> dolor <span class="change delete">Lorem ipsum dolorv</span><span class="change add">dignissim</span> Aliquam suscipit odio ac ante luctus pharetra . Pellentesque sit amet pellentesque augue . Aliquam vel tellus et urna dictum accumsan eget at massa Lorem ipsum dolorv Aliquam suscipit odio ac ante luctus pharetra . Pellentesque sit amet pellentesque augue. Aliquam vel tellus et urna dictum accumsan eget at massa Lorem ipsum dolorv Aliquam suscipit odio ac ante luctus pharetra . Pellentesque sit amet pellentesque augue. Aliquam vel tellus et urna dictum accumsan eget at massa Lorem ipsum dolorv Aliquam suscipit odio ac ante luctus pharetra . Pellentesque sit amet pellentesque augue.</p>
+				<p>Aliquam vel tellus et urna dictum accumsan eget at massa Lorem ipsum dolorv Aliquam suscipit odio ac ante luctus pharetra . <span class="change delete">Pellentesque</span> sit amet pellentesque augue. Aliquam vel tellus et urna dictum accumsan eget at massa Lorem ipsum dolorv Aliquam suscipit odio ac ante luctus pharetra . Pellentesque sit amet pellentesque augue. Aliquam vel tellus et urna dictum accumsan eget at massa Lorem ipsum dolorv Aliquam suscipit odio ac ante luctus pharetra . Pellentesque sit amet pellentesque augue. Aliquam vel tellus et urna dictum accumsan eget at massa Lorem ipsum dolorv Aliquam suscipit odio ac ante luctus pharetra . Pellentesque sit amet pellentesque augue.</p>
+				<p>Aliquam vel tellus et urna dictum accumsan eget at massa Lorem ipsum dolorv Aliquam suscipit odio ac ante luctus pharetra . Aliquam vel tellus et urna dictum accumsan eget at massa Lorem ipsum dolorv Aliquam suscipit odio ac ante luctus pharetra . Pellentesque sit amet pellentesque augue. <span class="change add">Pellentesque sit amet pellentesque augue . Aliquam vel tellus et urna dictum accumsan eget at massa</span></p>
+			</div>
+		</article>
+
+	</div><!--/.row-->
+</div><!--/.container-->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

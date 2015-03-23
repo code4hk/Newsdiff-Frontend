@@ -20,6 +20,7 @@ article {
 	padding: 20px 0;
 	border-top: solid 1px #999;
 }
+article.page,
 article.first {
 	margin-top: 0;
 	padding-top: 10px;
@@ -63,4 +64,40 @@ article.first {
 .news-teaser .news-teaser-content .stats .changes .figure {
 	color: #4C9ED9;
 	font-weight: bold;
+}
+
+/**
+ * single news page
+ */
+.news-full {
+	padding: 0 1em;
+}
+.news-full h1 {
+	font-size: 1.6em;
+	margin: 0.4em 0;
+}
+.news-full p {
+	margin: 1.2em 0;
+	text-align: justify;
+}
+.news-full .source,
+.news-full .stats {
+	color: #777;
+}
+.news-full .content {
+	margin: 1em 0;
+	line-height: 2em;
+	text-shadow: 0 0 0.5em #000;
+	color: #CCC;
+}
+.news-full .content .change {
+	color: #000;
+	text-shadow: 0 0 #000;
+}
+.news-full .content .add {
+	color: #060;
+}
+.news-full .content .delete {
+	color: #A00;
+	text-decoration: line-through;
 }
