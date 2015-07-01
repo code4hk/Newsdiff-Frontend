@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 var envars = require('./includes/envars.js')
+var forward = require('./includes/forward.js')
 
 envars.ready(function () {
 
@@ -12,10 +13,16 @@ envars.ready(function () {
   app.use('/', express.static(path.join(__dirname, 'public')));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: true}));
+  app.use(forward(/^\/api\/(.+?)$/, process.env["API_BASE_URL"]));
 
   app.get('/scripts/env.js', function(req, res) {
+    /*
     var js = 'var env = ' + JSON.stringify({
       "api_base_url": process.env["API_BASE_URL"]
+    }) + ';';
+    */
+    var js = 'var env = ' + JSON.stringify({
+      "api_base_url": '/api/'
     }) + ';';
     res.setHeader('Cache-Control', 'no-cache');
     res.send(js);
