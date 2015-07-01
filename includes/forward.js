@@ -6,10 +6,8 @@ module.exports = function(pattern, host){
     if(req.url.match(pattern)){
       var db_path = req.url.match(pattern)[1]
         , db_url = [host, db_path].join('');
-	    console.log(db_url);
       req.pipe(request[req.method.toLowerCase()](db_url)).pipe(res);
     }else{
-	    console.log("next");
       next();
     }
   }
