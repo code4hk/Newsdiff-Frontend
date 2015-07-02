@@ -1,4 +1,9 @@
 
+'use strict'
+
+var React = require('react');
+var api = require('./api.js');
+
 // extract id from a news item
 var newsId = function (item) {
   return item._id.$oid;

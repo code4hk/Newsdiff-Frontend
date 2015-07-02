@@ -1,16 +1,22 @@
 {
-  "name": "newsdiff-frontend",
-  "version": "0.0.1",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/code4hk/Newsdiff-Frontend.git"
-  },
-  "author": "Code4HK",
-  "license": "GPLv3",
-  "dependencies": {
-    "express": "^4.13.0",
-    "body-parser": "^1.13.0",
-    "prompt": "^0.2.14"
-  }
+	"name": "newsdiff-frontend",
+	"version": "0.0.1",
+	"description": "",
+	"scripts": {
+		"build": "webpack",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/code4hk/Newsdiff-Frontend.git"
+	},
+	"author": "Code4HK",
+	"license": "GPLv3",
+	"dependencies": {
+		"express": "^4.13.0",
+		"body-parser": "^1.13.0",
+		"prompt": "^0.2.14",
+		"jsx-loader": "^0.13.2",
+		"react": "^0.13.3"
+	}
 }
