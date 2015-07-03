@@ -5,15 +5,15 @@ var loaders = [
     //tell webpack to use jsx-loader and babel for all *.jsx files
     test: /\.jsx$/,
     loaders: [
-      'jsx-loader?insertPragma=React.DOM&harmony',
-      'babel'
+      'jsx?insertPragma=React.DOM&harmony',
+      'babel?stage=1'
     ]
   },
   {
     //tell webpack to use babel for all *.js files
     test: /\.js$/,
     loaders: [
-      'babel'
+      'babel?stage=1'
     ]
   }
 ]
