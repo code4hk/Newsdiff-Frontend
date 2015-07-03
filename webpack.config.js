@@ -1,24 +1,39 @@
+
+// loaders to use for different file type
+var loaders = [
+  {
+    //tell webpack to use jsx-loader and babel for all *.jsx files
+    test: /\.jsx$/,
+    loaders: [
+      'jsx-loader?insertPragma=React.DOM&harmony',
+      'babel'
+    ]
+  },
+  {
+    //tell webpack to use babel for all *.js files
+    test: /\.js$/,
+    loaders: [
+      'babel'
+    ]
+  }
+]
+
+// don't bundle these libraries
+var externals =  {
+  //don't bundle the 'react' npm package with our bundle.js
+  //but get it from a global 'React' variable
+  'react': 'React'
+}
+
 module.exports = [
   {
     name: "browser",
     context: __dirname + "/app",
     entry: "./main.jsx",
     module: {
-      loaders: [
-        {
-          //tell webpack to use jsx-loader for all *.jsx files
-          test: /\.jsx$/,
-          loaders: [
-            'jsx-loader?insertPragma=React.DOM&harmony'
-          ]
-        }
-      ]
+      loaders: loaders
     },
-    externals: {
-      //don't bundle the 'react' npm package with our bundle.js
-      //but get it from a global 'React' variable
-      'react': 'React'
-    },
+    externals: externals,
     resolve: {
       extensions: ['', '.js', '.jsx']
     },

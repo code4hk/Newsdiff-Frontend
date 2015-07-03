@@ -1,8 +1,8 @@
 
 'use strict'
 
-var React = require('react');
-var NewsListItem = require('./news_list_item');
+import React from 'react';
+import NewsListItem from './news_list_item';
 
 // extract id from a news item
 var newsId = function (item) {
@@ -10,7 +10,7 @@ var newsId = function (item) {
 }
 
 // NewsList
-module.exports = React.createClass({
+export default React.createClass({
   render: function() {
     var newsItems = this.props.items.map(function(data, index) {
       return (

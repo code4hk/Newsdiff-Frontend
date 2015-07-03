@@ -1,11 +1,11 @@
 
 'use strict'
 
-var React = require('react');
-var Menu = require('../components/menu');
+import React from 'react';
+import Menu from '../components/menu';
 
 // AboutPage
-module.exports = React.createClass({
+export default React.createClass({
   render: function () {
     return (
       <div className="page-about">

@@ -1,10 +1,10 @@
 
 'use strict'
 
-var React = require('react');
+import React from 'react';
 
 // NewsListItem
-module.exports = React.createClass({
+export default React.createClass({
   render: function() {
     return (
       <nav className="menu">

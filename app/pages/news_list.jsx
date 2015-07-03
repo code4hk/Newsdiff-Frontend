@@ -1,14 +1,13 @@
 
 'use strict'
 
-var api = require('../api');
-
-var React = require('react');
-var NewsList = require('../components/news_list');
-var Menu = require('../components/menu');
+import api from '../api';
+import React from 'react';
+import NewsList from '../components/news_list';
+import Menu from '../components/menu';
 
 // NewsListPage
-module.exports = React.createClass({
+export default React.createClass({
   getInitialState: function() {
     return {
       items: [],
