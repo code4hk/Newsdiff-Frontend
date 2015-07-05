@@ -5,8 +5,8 @@ import React from 'react';
 import connectToStores from 'alt/utils/connectToStores';
 import { Component } from 'react';
 
-import NewsListItem from './news_list_item';
-import NewsListStore from '../stores/news_list_store';
+import NewsListItem from '../components/NewsListItem';
+import NewsListStore from '../stores/NewsListStore';
 
 // extract id from a news item
 var newsId = function (item) {
@@ -38,7 +38,7 @@ class NewsList extends Component {
     return (
       <div className="news-list">
         {newsItems}
-      </div>      
+      </div>
     );
   }
 

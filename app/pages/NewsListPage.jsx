@@ -2,8 +2,8 @@
 'use strict'
 
 import React from 'react';
-import NewsList from '../components/news_list';
-import Menu from '../components/menu';
+import NewsList from '../components/NewsList';
+import Menu from '../components/Menu';
 
 // NewsListPage
 export default React.createClass({

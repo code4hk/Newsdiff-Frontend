@@ -2,9 +2,9 @@
 'use strict'
 
 import {Route, DefaultRoute} from 'react-router';
-import App from './app';
-import NewsListPage from './pages/news_list_page';
-import AboutPage from './pages/about_page';
+import App from './common/App';
+import NewsListPage from './pages/NewsListPage';
+import AboutPage from './pages/AboutPage';
 
 // declare our routes and their hierarchy
 export default (

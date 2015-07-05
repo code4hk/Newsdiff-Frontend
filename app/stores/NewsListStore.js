@@ -1,9 +1,9 @@
 
 'use strict'
 
-import alt from '../alt';
-import RouteActions from '../actions/route_actions';
-import api from '../api';
+import alt from '../common/alt';
+import RouteActions from '../actions/RouteActions';
+import api from '../common/api';
 
 class NewsListStore {
 
