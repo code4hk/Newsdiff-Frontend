@@ -35,7 +35,10 @@ module.exports = [
     },
     externals: externals,
     resolve: {
-      extensions: ['', '.js', '.jsx']
+      extensions: ['', '.js', '.jsx'],
+      alias: {
+          "request": "browser-request"
+      }
     },
   	output: {
     	path: __dirname + "/public/scripts",

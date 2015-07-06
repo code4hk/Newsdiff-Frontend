@@ -12,12 +12,16 @@
 	},
 	"author": "Code4HK",
 	"license": "GPLv3",
+	"browserify": {
+		"transform": ["aliasify"]
+	},
 	"dependencies": {
 		"express": "^4.13.0",
 		"body-parser": "^1.13.0",
 		"prompt": "^0.2.14",
 		"jsx-loader": "^0.13.2",
 		"babel-loader": "^5.2.2",
+		"browser-request": "^0.3.3",
 		"react": "^0.13.3",
 		"react-router": "^0.13.3",
 		"alt": "^0.16.10",
