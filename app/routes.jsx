@@ -10,7 +10,7 @@ import AboutPage from './pages/AboutPage';
 export default (
   <Route handler={App}>
     <DefaultRoute handler={NewsListPage}/>
-    <Route path="news" handler={NewsListPage}/>
-    <Route path="about" handler={AboutPage}/>
+    <Route name="page-news" path="news" handler={NewsListPage}/>
+    <Route name="page-about" path="about" handler={AboutPage}/>
   </Route>
 );

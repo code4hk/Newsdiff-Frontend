@@ -2,6 +2,7 @@
 'use strict'
 
 import React from 'react';
+import {Link} from 'react-router';
 
 // NewsListItem
 export default React.createClass({
@@ -9,8 +10,8 @@ export default React.createClass({
     return (
       <nav className="menu">
         <ul>
-          <li><a href="#/about">About</a></li>
-          <li><a href="#/news">News</a></li>
+          <li><Link to="page-about">About</Link></li>
+          <li><Link to="page-news">News</Link></li>
         </ul>
       </nav>
     );

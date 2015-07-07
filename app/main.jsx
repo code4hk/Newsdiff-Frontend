@@ -6,7 +6,7 @@ import Router from 'react-router';
 import routes from './routes';
 import RouteActions from './actions/RouteActions';
 
-Router.run(routes, Router.HashLocation, (Root) => {
+Router.run(routes, Router.HistoryLocation, (Root) => {
   React.render(<Root/>, document.getElementById('content'));
 
   // trigger this anyway, for now
