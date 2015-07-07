@@ -40,9 +40,9 @@ module.exports = [
           "request": "browser-request"
       }
     },
-  	output: {
-    	path: __dirname + "/public/scripts",
-    	filename: "bundle.js"
-  	}
+    output: {
+      path: __dirname + "/public/scripts",
+      filename: "bundle.js"
+    }
   }
 ]
