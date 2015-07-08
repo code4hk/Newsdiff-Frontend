@@ -20,14 +20,14 @@ class NewsListStore {
   listAll(params) {
     console.log("NewsListStore.listAll", params);
     API.getItems({
-      success: function(data) {
+      success: (data) => {
         // set the state of the store
         this.setState({items: data.news, meta: data.meta});
-      }.bind(this),
-      error: function(xhr, status, err) {
+      },
+      error: (response, err) => {
         // report error
-        console.error(status, err.toString());
-      }.bind(this)
+        console.error(response, err);
+      }
     })
   }
 
