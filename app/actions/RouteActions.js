@@ -11,6 +11,12 @@ class RouteActions {
     this.dispatch({});
   }
 
+  // load a news
+  pageNewsDetails(id) {
+    console.log("RouteActions.pageNewsDetails(id)", id);
+    this.dispatch({id: id});
+  }
+
   // a page to read publisher news
   pagePublisherNews(publisher_id) {
     console.log("RouteActions.pagePublisherNews");
