@@ -5,13 +5,9 @@ import React from 'react';
 import connectToStores from 'alt/utils/connectToStores';
 import { Component } from 'react';
 
+import { NewsIdOf } from '../common/utils';
 import NewsListItem from '../components/NewsListItem';
 import NewsListStore from '../stores/NewsListStore';
-
-// extract id from a news item
-var newsId = function (item) {
-  return item._id.$oid;
-}
 
 @connectToStores
 class NewsList extends Component {
@@ -31,7 +27,7 @@ class NewsList extends Component {
     var newsItems = this.props.items.map(function(data, index) {
       return (
         <NewsListItem
-          key={newsId(data)}
+          key={NewsIdOf(data)}
           data={data} />
       );
     });
