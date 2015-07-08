@@ -2,13 +2,17 @@
 'use strict'
 
 import React from 'react';
+import { Link } from 'react-router';
+import { NewsIdOf } from '../common/utils';
 
 // NewsListItem
 export default React.createClass({
   render: function() {
     return (
       <div className="news-item">
-        <h3>{this.props.data.title}</h3>
+        <h3><Link to="page-news-details" params={{ id: NewsIdOf(this.props.data) }}>
+          {this.props.data.title}
+        </Link></h3>
         <ul>
           <li>[<a href={this.props.data.url} target="_blank">
               Original Link
