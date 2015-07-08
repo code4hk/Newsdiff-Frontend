@@ -3,7 +3,7 @@
 
 import alt from '../common/alt';
 import RouteActions from '../actions/RouteActions';
-import api from '../common/api';
+import API from '../common/API';
 
 class NewsListStore {
 
@@ -19,7 +19,7 @@ class NewsListStore {
 
   listAll(params) {
     console.log("NewsListStore.listAll", params);
-    api.getItems({
+    API.getItems({
       success: function(data) {
         // set the state of the store
         this.setState({items: data.news, meta: data.meta});
