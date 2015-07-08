@@ -5,6 +5,12 @@ import alt from '../common/alt';
 
 class RouteActions {
 
+  // common things to load once the site
+  firstLoad() {
+    console.log("RouteActions.firstLoad");
+    this.dispatch({});
+  }
+
   // a page to read all news
   pageNews() {
     console.log("RouteActions.pageNews");
@@ -18,9 +24,9 @@ class RouteActions {
   }
 
   // a page to read publisher news
-  pagePublisherNews(publisher_id) {
+  pagePublisherNews(code) {
     console.log("RouteActions.pagePublisherNews");
-    this.dispatch({publisher_id});
+    this.dispatch({code: code});
   }
 
 }

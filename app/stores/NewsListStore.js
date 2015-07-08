@@ -22,7 +22,12 @@ class NewsListStore {
     API.getItems({
       success: (data) => {
         // set the state of the store
-        this.setState({items: data.news, meta: data.meta});
+        this.setState({
+          publisher: 'all',
+          code: '',
+          items: data.news,
+          meta: data.meta
+        });
       },
       error: (response, err) => {
         // report error
@@ -31,8 +36,23 @@ class NewsListStore {
     })
   }
 
-  listPublisherNews() {
-    console.log("NewsListStore.listPublisherNews");
+  listPublisherNews(params) {
+    console.log("NewsListStore.listPublisherNews", params);
+    API.getPublisherItems(params.code, {
+      success: (data) => {
+        // set the state of the store
+        this.setState({
+          publisher: 'publisher',
+          code: params.code,
+          items: data.news,
+          meta: data.meta
+        });
+      },
+      error: (response, err) => {
+        // report error
+        console.error(response, err);
+      }
+    })
   }
 
 }
