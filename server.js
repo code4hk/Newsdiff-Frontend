@@ -10,7 +10,6 @@ var forward = require('./includes/forward.js')
 envars.ready(function () {
 
   app.set('port', (process.env.PORT || 3000));
-  app.use('/', express.static(path.join(__dirname, 'public')));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(forward(/^\/api\/(.+?)$/, process.env["API_BASE_URL"]));
@@ -27,6 +26,9 @@ envars.ready(function () {
     res.setHeader('Cache-Control', 'no-cache');
     res.send(js);
   });
+
+  // serve other static files
+  app.use('/', express.static(path.join(__dirname, 'public')));
 
   app.get('*', function(req, res){
     res.sendfile(path.join(__dirname, 'public', 'index.html'));
