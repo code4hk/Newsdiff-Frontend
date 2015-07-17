@@ -15,11 +15,6 @@ envars.ready(function () {
   app.use(forward(/^\/api\/(.+?)$/, process.env["API_BASE_URL"]));
 
   app.get('/scripts/env.js', function(req, res) {
-    /*
-    var js = 'var env = ' + JSON.stringify({
-      "api_base_url": process.env["API_BASE_URL"]
-    }) + ';';
-    */
     var js = 'var env = ' + JSON.stringify({
       "api_base_url": '/api/'
     }) + ';';
