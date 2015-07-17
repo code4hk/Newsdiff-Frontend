@@ -28,7 +28,7 @@ var externals =  {
 module.exports = [
   {
     name: "browser",
-    context: __dirname + "/app",
+    context: __dirname + "/src/app",
     entry: "./main.jsx",
     module: {
       loaders: loaders
