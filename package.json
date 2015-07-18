@@ -31,6 +31,7 @@
 		"gulp-util": "~3.0.6",
 		"gulp-watch": "~4.2.4",
 		"gulp-sass": "~2.0.3",
+		"gulp-copy": "~0.0.2",
 		"webpack": "^1.10.1",
 		"jsx-loader": "^0.13.2",
 		"babel-loader": "^5.2.2"

@@ -9,10 +9,13 @@ var express = require("express");
 var gutil = require("gulp-util");
 var watch = require("gulp-watch");
 var sass = require("gulp-sass");
+var copy = require("gulp-copy");
 
 
 // convert styles
 gulp.task("build.styles", function(callback) {
+
+  // monitor css source
   var files = [
     "./src/styles/*.sass",
     "./src/styles/*.scss"
@@ -23,6 +26,10 @@ gulp.task("build.styles", function(callback) {
   gulp.src(files)
     .pipe(sass(sassCfg))
     .pipe(gulp.dest("./public/styles/"));
+
+  // monitor plain css
+  gulp.src("./src/styles/*.css")
+    .pipe(copy("./public/styles/", { prefix: 2 }));
 
   gutil.log("[styles]", "styles generated");
   callback();
@@ -64,7 +71,8 @@ gulp.task("dev.env", function(callback) {
 gulp.task("dev.watch", function(callback) {
   watch([
     "./src/styles/**/*.sass",
-    "./src/styles/**/*.scss"
+    "./src/styles/**/*.scss",
+    "./src/styles/**/*.css"
   ], function () {
     gulp.run("build.styles");
   });
