@@ -4,6 +4,8 @@ var gulp = require("gulp");
 var browserSync = require("browser-sync");
 var webpack = require("webpack");
 var express = require("express");
+var url = require("url");
+var fs = require("fs");
 
 // gulp plugins
 var gutil = require("gulp-util");
@@ -91,10 +93,20 @@ gulp.task("dev.server", function(callback) {
     "public/styles/**/*.css",
     "public/scripts/**/*.js"
   ];
+  var baseDir = "./public";
 
   browserSync.init(files, {
     server: {
-      baseDir: "./public"
+      baseDir: baseDir
+    },
+    middleware: function(req, res, next) {
+        var fileName = url.parse(req.url);
+        fileName = fileName.href.split(fileName.search).join("");
+        var fileExists = fs.existsSync(baseDir + "/" + fileName);
+        if (!fileExists && fileName.indexOf("browser-sync-client") < 0) {
+            req.url = "/index.html";
+        }
+        return next();
     },
     port: process.env["PORT"] || 8080
   });
