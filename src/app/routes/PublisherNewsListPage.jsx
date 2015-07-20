@@ -14,7 +14,7 @@ class PublisherNewsListPage extends Component {
     var code = this.props.params.code;
     RouteActions.pagePublisherNews(code);
     return (
-      <div className="page-news-details mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div className="page-news-details">
         <Header />
         <MobileHeader />
         <main class="mdl-layout__content">

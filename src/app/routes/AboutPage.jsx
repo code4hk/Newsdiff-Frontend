@@ -8,7 +8,7 @@ import { Header, MobileHeader } from '../components/Header';
 export default React.createClass({
   render: function () {
     return (
-      <div className="page-about mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div className="page-about">
         <Header />
         <MobileHeader />
         <main class="mdl-layout__content">

@@ -11,7 +11,7 @@ export default React.createClass({
   render: function() {
     RouteActions.pageNews();
     return (
-      <div className="page-news-list mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div className="page-news-list">
         <Header />
         <MobileHeader />
         <main class="mdl-layout__content">
