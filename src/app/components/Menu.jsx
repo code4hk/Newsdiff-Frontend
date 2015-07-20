@@ -21,19 +21,34 @@ class Menu extends Component {
   }
 
   render() {
+
+    // render parameter
+    if (typeof this.props.params == "undefined") {
+      var params = {};
+    } else {
+      var params = this.props.params;
+    }
+    var params = Object.assign({
+      linkClass: "",
+      navClass: ""
+    }, params);
+    var linkClass = params.linkClass;
+    var navClass = params.navClass;
+
+    console.log(linkClass);
+
     var publisherLinks = this.props.data.map(function(data, index) {
       return (
-        <li><Link to="page-publisher-news"
-          params={{ code: data.code }}>{ data.name }</Link></li>
+        <Link to="page-publisher-news" className={ linkClass }
+          params={{ code: data.code }}>{ data.name }</Link>
       );
     });
+
     return (
-      <nav className="menu">
-        <ul>
-          <li><Link to="page-about">關於我們</Link></li>
-          <li><Link to="page-news">所有修改</Link></li>
-          { publisherLinks }
-        </ul>
+      <nav className={ navClass }>
+        <Link to="page-about" className={ linkClass }>關於我們</Link>
+        <Link to="page-news" className={ linkClass }>所有新聞來源</Link>
+        { publisherLinks }
       </nav>
     );
   }
