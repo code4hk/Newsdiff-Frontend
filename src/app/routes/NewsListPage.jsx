@@ -2,23 +2,20 @@
 'use strict'
 
 import React from 'react';
-import NewsList from '../components/NewsList';
-import { Header, MobileHeader } from '../components/Header';
 import RouteActions from '../actions/RouteActions';
+import PageMaster from '../routes/PageMaster';
+import NewsList from '../components/NewsList';
 
-// NewsListPage
-export default React.createClass({
-  render: function() {
+class NewsListPage extends PageMaster {
+  renderContent() {
     RouteActions.pageNews();
     return (
-      <div className="page-news-list">
-        <Header />
-        <MobileHeader />
-        <main class="mdl-layout__content">
-          <h1>News</h1>
-          <NewsList />
-        </main>
+      <div>
+        <h1>News</h1>
+        <NewsList />
       </div>
     );
   }
-});
+}
+
+export default NewsListPage;
