@@ -20,6 +20,14 @@ class Menu extends Component {
     return state;
   }
 
+  componentDidMount() {
+    var links = React.findDOMNode(this).getElementsByTagName('a');
+    for (let link of links) {
+      // TODO: make sure this only be done in browser
+      componentHandler.upgradeDom(link);
+    }
+  }
+
   render() {
 
     // render parameter
@@ -35,20 +43,32 @@ class Menu extends Component {
     var linkClass = params.linkClass;
     var navClass = params.navClass;
 
-    console.log(linkClass);
-
-    var publisherLinks = this.props.data.map(function(data, index) {
+    var links = this.props.data.map(function(data, index) {
       return (
-        <Link to="page-publisher-news" className={ linkClass }
+        <Link to="page-publisher-news"
+          key={ "page-publisher-" + data.code }
+          ref={ "page-publisher-" + data.code }
+          className={ linkClass }
+          activeClassName="is-active"
           params={{ code: data.code }}>{ data.name }</Link>
       );
     });
 
+    // prepend the important links
+    links.unshift(
+      <Link to="page-about"
+        key="page-about"
+        className={ linkClass }
+        activeClassName="is-active">關於我們</Link>,
+      <Link to="page-news"
+        key="page-news"
+        className={ linkClass }
+        activeClassName="is-active">所有新聞來源</Link>
+    );
+
     return (
       <nav className={ navClass }>
-        <Link to="page-about" className={ linkClass }>關於我們</Link>
-        <Link to="page-news" className={ linkClass }>所有新聞來源</Link>
-        { publisherLinks }
+        { links }
       </nav>
     );
   }
