@@ -62,6 +62,7 @@ gulp.task("dev.env", function(callback) {
   fs.writeFile("./public/scripts/env.js", js, function(err) {
     if (err) {
       callback(err);
+      process.exit(1);
       return
     }
     gutil.log("[dev.env]", "env.js created");
@@ -118,6 +119,7 @@ gulp.task("dev.api", function(callback) {
 
   if (typeof process.env["API_BASE_URL"] == "undefined") {
     callback("Environment variable API_BASE_URL is not defined");
+    process.exit(1);
   }
 
   var bodyParser = require("body-parser");
