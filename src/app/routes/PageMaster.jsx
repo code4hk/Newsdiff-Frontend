@@ -9,7 +9,7 @@ import RouteActions from '../actions/RouteActions';
 class PageMaster extends Component {
   render() {
     return (
-      <div className="page-master">
+      <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <Header />
         <MobileHeader />
         <main class="mdl-layout__content">
