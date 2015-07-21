@@ -11,7 +11,6 @@ class NewsListPage extends PageMaster {
     RouteActions.pageNews();
     return (
       <div>
-        <h1>News</h1>
         <NewsList />
       </div>
     );

@@ -13,6 +13,7 @@ class NewsListStore {
       listPublisherNews: RouteActions.pagePublisherNews
     });
 
+    this.publisher_code = '';
     this.items = [];
     this.meta = {};
   }
@@ -23,8 +24,7 @@ class NewsListStore {
       success: (data) => {
         // set the state of the store
         this.setState({
-          publisher: 'all',
-          code: '',
+          publisher_code: '',
           items: data.news,
           meta: data.meta
         });
@@ -42,8 +42,7 @@ class NewsListStore {
       success: (data) => {
         // set the state of the store
         this.setState({
-          publisher: 'publisher',
-          code: params.code,
+          publisher_code: params.code,
           items: data.news,
           meta: data.meta
         });
