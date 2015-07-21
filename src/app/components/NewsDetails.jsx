@@ -1,9 +1,8 @@
 
 'use strict'
 
-import React from 'react';
+import React, { Component } from 'react';
 import connectToStores from 'alt/utils/connectToStores';
-import { Component } from 'react';
 import NewsDetailsStore from '../stores/NewsDetailsStore';
 
 @connectToStores
