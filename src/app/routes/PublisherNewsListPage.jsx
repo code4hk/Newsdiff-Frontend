@@ -1,15 +1,16 @@
 
 'use strict'
 
-import React from 'react';
+import React, { Component } from 'react';
 import RouteActions from '../actions/RouteActions';
-import PageMaster from '../routes/PageMaster';
 import NewsList from '../components/NewsList';
 
-class PublisherNewsListPage extends PageMaster {
-  renderContent() {
+class PublisherNewsListPage extends Component {
+  componentDidMount() {
     var code = this.props.params.code;
     RouteActions.pagePublisherNews(code);
+  }
+  render() {
     return (
       <div>
         <NewsList />

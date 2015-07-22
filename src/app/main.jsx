@@ -10,8 +10,8 @@ import RouteActions from './actions/RouteActions';
 import PublishersStore from './stores/PublishersStore';
 
 RouteActions.firstLoad();
-Router.run(routes, Router.HistoryLocation, (Root) => {
-  React.render(<Root/>, document.getElementById('content'));
+Router.run(routes, Router.HistoryLocation, (Root, state) => {
+  console.log("ReactRouter root callback state", state);
+  console.log("ReactRouter root", Root);
+  React.render(<Root/>, document.body);
 });
-
-// hello
