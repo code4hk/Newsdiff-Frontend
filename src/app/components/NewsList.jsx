@@ -7,6 +7,7 @@ import { NewsIdOf } from '../common/utils';
 import NewsListItem from '../components/NewsListItem';
 import NewsListStore from '../stores/NewsListStore';
 import PublishersStore from '../stores/PublishersStore';
+import RouteActions from '../actions/RouteActions';
 
 @connectToStores
 class NewsList extends Component {
@@ -21,7 +22,6 @@ class NewsList extends Component {
     var pubs = PublishersStore.getState();
     var res = {
       publishers: pubs.data,
-      publisher_code: news.publisher_code,
       news: news
     }
     console.log('NewsList.getPropsFromStores', res);
@@ -43,6 +43,18 @@ class NewsList extends Component {
       return info.name;
     } else {
       return '未知新聞來源';
+    }
+  }
+
+  componentWillMount() {
+    if (this.props.publisher_code == "") {
+      console.log("publisher_code", this.props.publisher_code);
+      RouteActions.pageNews();
+    } else if (typeof this.props.publisher_code != "undefined") {
+      console.log("publisher_code", this.props.publisher_code);
+      RouteActions.pagePublisherNews(this.props.publisher_code);
+    } else {
+      console.error("No publisher_code");
     }
   }
 
