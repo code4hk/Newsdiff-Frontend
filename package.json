@@ -1,0 +1,40 @@
+{
+	"name": "newsdiff-frontend",
+	"version": "0.0.1",
+	"description": "",
+	"scripts": {
+		"build": "gulp build",
+		"dev":   "gulp",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/code4hk/Newsdiff-Frontend.git"
+	},
+	"author": "Code4HK",
+	"license": "GPLv3",
+	"browserify": {
+		"transform": ["aliasify"]
+	},
+	"dependencies": {
+		"express": "^4.13.0",
+		"body-parser": "^1.13.0",
+		"prompt": "^0.2.14",
+		"browser-request": "^0.3.3",
+		"react": "^0.13.3",
+		"react-router": "^0.13.3",
+		"request": "^2.65.0",
+		"alt": "^0.16.10"
+	},
+	"devDependencies": {
+		"browser-sync": "~2.7.13",
+		"gulp": "~3.9.0",
+		"gulp-util": "~3.0.6",
+		"gulp-watch": "~4.2.4",
+		"gulp-sass": "~2.0.3",
+		"gulp-copy": "~0.0.2",
+		"webpack": "^1.10.1",
+		"jsx-loader": "^0.13.2",
+		"babel-loader": "^5.2.2"
+	}
+}
